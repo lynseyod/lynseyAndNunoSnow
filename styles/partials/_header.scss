@@ -1,0 +1,34 @@
+header {
+    height: 15vh;
+    .wrapper {
+        background: rgb(27, 26, 26);
+        border: 15px solid $primeryBorder;
+        border-radius: 30px 30px 0 0;
+    }
+    h1 {
+        display: inline-block;
+        font-size: 5.5rem;
+        color: $primeryHeaderColor;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            display: block;
+            height: 25px;
+            width: 25px;
+            background-color: $secondaryHeaderColor;
+            box-shadow: 0px 0px 5px $primeryColor;
+            border-radius: 50%;
+        }
+        &::before {
+            left: -60px;
+        }
+        &::after {
+            right: -60px;
+        }
+    }
+}

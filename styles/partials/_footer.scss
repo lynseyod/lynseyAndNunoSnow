@@ -1,0 +1,17 @@
+footer {
+  height: 5vh;
+  background: $primeryBackground;
+  .wrapper {
+  background: $primeryBackground;
+  margin-top: 20px;
+  margin-bottom: 0;
+  }
+  p {
+      font-size: 2rem;
+      color: #a32a2e;
+      text-align: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+  }
+}

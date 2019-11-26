@@ -1,0 +1,183 @@
+.inputs {
+    height: calc(80vh - 40px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main .wrapper {
+    border: 2px solid $primeryBorder;
+}
+
+form {
+    width: 100%;
+    fieldset {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        label {
+            text-align: center;
+            font-size: 2.8rem;
+            color: $primeryColor;
+            padding: 0 0 0.5% 0;
+        }
+        input[type="search"],
+        select, 
+        input[type="text"] {
+            font-size: 2rem;
+            border-radius: 15px;
+            &:focus {
+                background: $secondaryPopColor;
+                color: $primeryColor;
+            }
+        }
+        .search {
+            height: 100%;
+        }
+        .searchButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            #search {
+                text-align: center;
+                width: 50%;
+            }
+        }
+        p {
+            font-size: 2rem;
+            font-style: italic;
+            text-shadow: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            color: $primeryColor;
+            padding: 0 10%;
+            margin: 1% auto;
+        }
+        .finalSubmit {
+            height: 60%;
+            fieldset:nth-child(1) > label:nth-child(1) {
+                padding-top: 0;
+            }
+        }
+        .flexInputs {
+            display: flex;
+            width: 100%;
+            margin-bottom: 1%;
+            div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        #route ,
+        #stop {
+            width: 80%;
+            text-align: center;
+        }
+        #time {
+            width: 20%;
+            text-align: center;
+        }
+    }
+    button.submit{
+        margin-top: 1%;
+    }
+}
+
+.results {  
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    p {
+        font-size: 3rem;
+        color: $primeryColor;
+        margin: 0;
+        padding: 50px 0;
+        height: 20%;
+    }
+    .departures,
+    .arrivals {
+        width: 50%;
+    }
+    .delays {
+        width: 100%;
+        p {
+        margin: 0;
+        padding: 0 20px;
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        font-size: 2rem;
+        color: $primeryColor;
+        border-radius: 20px;
+        border: 3px solid $secondaryBorder;
+        background: $secondaryPopColor;
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 20px;
+        transition: 0.3s;
+        &.rain {
+            color: $secondaryPopColor;
+            background: $primeryHeaderColor;
+        }
+        &.snow {
+            color: $primeryColor;
+            background: $primeryPopColor;
+        }
+        &:hover {
+            color: $secondaryPopColor;
+            background: lightgrey;
+        }
+    }
+}
+
+.errorMessage {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    height: 25%;
+    width: 70%;
+    background-color: $primeryBackground;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid $primeryBorder;
+    button {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border: none;
+        background: none;
+    }
+    i {
+        font-size: 3rem;
+        color: $primeryColor;
+    }
+    p {
+        margin: 0 0 0 30px;
+        font-size: 2rem;
+        color: $primeryColor;
+    }
+}
+
+.hidden {
+    display: none;
+}
